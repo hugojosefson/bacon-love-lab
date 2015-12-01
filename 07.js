@@ -12,9 +12,8 @@ export default (Bacon, enteringShips, destroyerPosition) => {
         .fold({}, (report, ship) => {
             if (!report[ship.type]) {
                 report[ship.type] = 0;
-            } else {
-                report[ship.type] += 1;
             }
+            report[ship.type] += 1;
             return report;
         });
 
